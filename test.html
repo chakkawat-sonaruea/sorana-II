@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://unpkg.com/htmx.org@1.9.12"></script>
+
+
+    <title>Document</title>
+</head>
+<body>
+    <form
+        hx-post="http://localhost:55511/upload"
+        hx-encoding="multipart/form-data"
+        hx-trigger="submit"
+        hx-swap="innerHTML"
+        hx-target="#response"
+    >
+        <input type="file" name="file" id="file">
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <code id="response">Response Here!</code>
+</body>
+</html>
